@@ -1,7 +1,11 @@
 #!/bin/bash
 
-forecast=~/Dropbox/sys/status/ForecastRochester.json
+forecastfile=~/Dropbox/sys/status/ForecastRochester.json
 
-echo `/usr/local/bin/jq '.currently.temperature' < $forecast`
-forecast_time=`/usr/local/bin/jq '.currently.time' < $forecast`
+forecast=$(/usr/local/bin/jq '.currently.temperature' < $forecastfile)
+
+# echo $forecast
+echo ${forecast%???}
+
+forecast_time=`/usr/local/bin/jq '.currently.time' < $forecastfile`
 date -r "$forecast_time"

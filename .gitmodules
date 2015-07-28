@@ -1,0 +1,3 @@
+[submodule "TextBar-Recipes"]
+	path = TextBar-Recipes
+	url = https://github.com/richie5um/TextBar-Recipes.git

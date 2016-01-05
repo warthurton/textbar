@@ -1,6 +1,6 @@
 #!/bin/bash
 
-forecastfile=~/Dropbox/sys/status/ForecastRochester.json
+forecastfile=~/Dropbox/sys/status/Forecast.json
 
 forecast=$(/usr/local/bin/jq '.currently.temperature | floor' < $forecastfile)
 
